@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - InsightTel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="bg-primary-bg text-text-primary min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 w-full bg-primary-bg/90 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.2)] z-1000">
+        <div class="container-custom py-4 flex justify-between items-center">
+            <a href="../../index.html" class="logo text-2xl font-bold gradient-text">InsightTel</a>
+            <a href="../../index.html" class="text-text-secondary hover:text-text-primary transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 py-12">
+        <div class="container-custom max-w-4xl">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Terms & Conditions</h1>
+                <p class="text-text-secondary text-lg">Syarat dan ketentuan penggunaan platform InsightTel</p>
+            </div>
+
+            <!-- Terms Content -->
+            <div class="space-y-8">
+                <!-- Section 1 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">1. Penerimaan Syarat</h2>
+                    <p class="text-text-secondary mb-3">
+                        Dengan mengakses dan menggunakan platform InsightTel, Anda menyetujui untuk terikat oleh syarat dan ketentuan ini. Jika Anda tidak setuju dengan sebagian atau seluruh syarat dan ketentuan, Anda tidak diizinkan untuk menggunakan platform ini.
+                    </p>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">2. Deskripsi Layanan</h2>
+                    <p class="text-text-secondary mb-3">
+                        InsightTel adalah platform demo yang menyediakan layanan rekomendasi produk telekomunikasi berbasis kecerdasan buatan (AI). Platform ini adalah demonstrasi teknologi dan tidak menyediakan layanan pembelian produk yang sebenarnya.
+                    </p>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">3. Penggunaan Platform</h2>
+                    <div class="space-y-3 text-text-secondary">
+                        <p>3.1. Anda setuju untuk menggunakan platform ini hanya untuk tujuan yang sah.</p>
+                        <p>3.2. Anda tidak boleh menggunakan platform untuk aktivitas ilegal atau tidak sah.</p>
+                        <p>3.3. Anda bertanggung jawab atas semua aktivitas yang terjadi di bawah akun Anda.</p>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">4. Hak Kekayaan Intelektual</h2>
+                    <p class="text-text-secondary mb-3">
+                        Seluruh konten, fitur, dan fungsi pada platform InsightTel, termasuk namun tidak terbatas pada teks, grafis, logo, ikon, gambar, kompilasi data, dan perangkat lunak, adalah hak milik InsightTel atau pemberi lisensinya dan dilindungi oleh undang-undang hak cipta dan kekayaan intelektual lainnya.
+                    </p>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">5. Perubahan Syarat</h2>
+                    <p class="text-text-secondary mb-3">
+                        Kami berhak untuk memodifikasi syarat dan ketentuan ini kapan saja. Perubahan akan berlaku segera setelah diposting di platform. Penggunaan berkelanjutan Anda atas platform setelah perubahan menandakan penerimaan Anda terhadap syarat dan ketentuan yang diperbarui.
+                    </p>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="card-base p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-primary-accent">6. Hukum yang Berlaku</h2>
+                    <p class="text-text-secondary mb-3">
+                        Syarat dan ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum yang berlaku. Setiap sengketa yang timbul dari atau terkait dengan penggunaan platform ini tunduk pada yurisdiksi pengadilan yang berwenang.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <script src="support.js"></script>
+    <script>
+        // Load footer component
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                document.getElementById('footer-container').innerHTML = `
+                    <footer class="bg-card-bg border-t border-white/5 py-6">
+                        <div class="container-custom text-center text-text-secondary text-sm">
+                            <p>Copyright © 2025 InsightTel. All rights reserved.</p>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
+</body>
+</html>
