@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - InsightTel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-primary-bg text-text-primary min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 w-full bg-primary-bg/90 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.2)] z-1000">
+        <div class="container-custom py-4 flex justify-between items-center">
+            <a href="index.html" class="logo text-2xl font-bold gradient-text">InsightTel</a>
+            <a href="index.html" class="text-text-secondary hover:text-text-primary transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center py-12">
+        <div class="container-custom max-w-md">
+            <div class="card-base p-8">
+                <div class="text-center mb-8">
+                    <div class="gradient-text text-4xl mb-4">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">Create Account</h1>
+                    <p class="text-text-secondary">Bergabung dengan InsightTel untuk pengalaman personal</p>
+                </div>
+
+                <form id="registerForm" class="space-y-6">
+                    <div class="form-group">
+                        <label class="block text-text-secondary text-sm mb-2">Username</label>
+                        <input type="text" id="registerUsername" class="form-control" placeholder="Choose a username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block text-text-secondary text-sm mb-2">Email</label>
+                        <input type="email" id="registerEmail" class="form-control" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block text-text-secondary text-sm mb-2">Password</label>
+                        <input type="password" id="registerPassword" class="form-control" placeholder="Create a password" required>
+                        <div class="text-xs text-text-secondary mt-1">Minimum 6 characters</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block text-text-secondary text-sm mb-2">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" id="terms" class="mt-1 mr-2" required>
+                        <label for="terms" class="text-sm text-text-secondary">
+                            I agree to the 
+                            <a href="pages/support/terms.html" class="text-primary-accent hover:underline">Terms & Conditions</a>
+                            and 
+                            <a href="pages/support/privacy.html" class="text-primary-accent hover:underline">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full py-3">
+                        <i class="fas fa-user-plus mr-2"></i> Create Account
+                    </button>
+
+                    <div class="text-center text-text-secondary text-sm">
+                        Already have an account? 
+                        <a href="login.html" class="text-primary-accent hover:underline">Login here</a>
+                    </div>
+
+                    <div class="text-center text-xs text-text-secondary mt-4">
+                        <p>Demo: Tidak memerlukan backend integration</p>
+                        <p>Register akan langsung mengarahkan ke halaman utama</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="pages/auth/register.js"></script>
+</body>
+</html>
